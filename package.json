@@ -1,0 +1,9 @@
+{
+  "name": "dheeran-movers-seo-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "vite", "build": "node scripts/generate-sitemap.mjs && vite build && node scripts/prerender.mjs", "preview": "vite preview", "serve:built": "node scripts/serve-built.mjs", "verify": "node scripts/verify-routes.mjs" },
+  "dependencies": { "@vitejs/plugin-react": "latest", "vite": "latest", "react": "latest", "react-dom": "latest", "lucide-react": "^0.468.0" },
+  "devDependencies": { "tailwindcss": "^4.0.0", "@tailwindcss/vite": "^4.0.0", "typescript": "latest" }
+}
