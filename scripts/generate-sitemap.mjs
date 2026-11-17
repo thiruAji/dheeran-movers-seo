@@ -1,7 +1,8 @@
 import { pages } from '../src/pages.js';
+import { articles, blogIndex } from '../src/blog.js';
 import { writeFile } from 'node:fs/promises';
 const base=(process.env.VITE_SITE_URL||'https://www.your-domain.sg').replace(/\/$/,'');
-const urls=[`${base}/`,...pages.map(p=>`${base}/${p.slug}`)];
+const urls=[`${base}/`,...pages.map(p=>`${base}/${p.slug}`),`${base}/${blogIndex.slug}`,...articles.map(article=>`${base}/${article.slug}`)];
 const xml=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(loc=>`  <url><loc>${loc}</loc></url>`).join('\n')}\n</urlset>\n`;
 await writeFile(new URL('../public/sitemap.xml',import.meta.url),xml,'utf8');
 await writeFile(new URL('../public/robots.txt',import.meta.url),`User-agent: *\nAllow: /\nSitemap: ${base}/sitemap.xml\n`,'utf8');
