@@ -27,6 +27,9 @@ body{background:var(--page)}
 .pricing-section{background:#f1f5f9;border-color:#e1e8ef}
 .service-card,.process-card,.related-card,.pricing-grid article,.hdb-price-grid article{background:#fff;box-shadow:0 3px 12px #10274608}
 footer{background:var(--navy);color:#fff}
+.footer-brand .brand{color:#fff}
+.footer-brand .brand b{color:#ffab61}
+.footer-brand .brand small{color:#c4d0de}
 .footer-grid>div>b{color:#fff}
 .footer-grid>div>a:not(.brand){color:#d2dce7}
 .footer-brand p{color:#c2cedb}
