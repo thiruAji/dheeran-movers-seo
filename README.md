@@ -14,12 +14,13 @@ React + Vite + Tailwind CSS landing site for the 30 requested moving-service and
 Set these Vercel Project Environment Variables (and locally in `.env`):
 
 - `VITE_SITE_URL`: the final HTTPS origin, with no trailing slash. The build uses it for the sitemap and robots file; page metadata uses it for canonicals and structured data.
-- `VITE_PHONE_NUMBER`: the real business phone number, such as `+65 8123 4567`. Enables tap-to-call on mobile.
-- `VITE_WHATSAPP_NUMBER`: the real WhatsApp number in international digits only, e.g. `6581234567`.
+- `VITE_PHONE_NUMBER`: phone number for tap-to-call. Defaults to `+65 8164 6269`.
+- `VITE_WHATSAPP_NUMBER`: WhatsApp number in international digits only. Defaults to `6581646269`.
+- `VITE_EMAIL`: public contact email. Defaults to `dheeranmovers@gmail.com`.
 - `VITE_GA_ID`: optional Google Analytics 4 measurement ID. Leave blank to disable GA.
 - `VITE_QUOTE_ENDPOINT`: optional HTTPS form endpoint accepting JSON POST and returning a 2xx response. If blank, the quote form opens WhatsApp with the user's message prefilled. Test the endpoint and privacy notice before launch.
 
-The site deliberately contains no invented street address, hours, prices, reviews, credentials or service guarantees. Add verified contact details and legal/privacy information before publishing. The quote form currently gathers name, phone, addresses, date and move notes; deploy an endpoint and add a privacy notice appropriate to your data handling before production use.
+The site deliberately contains no invented street address, hours, reviews, credentials or service guarantees. The public phone, WhatsApp and email defaults are set above. The quote form currently gathers name, phone, addresses, date and move notes; deploy an endpoint and add a privacy notice appropriate to your data handling before production use.
 
 ## Build and deploy to Vercel
 
