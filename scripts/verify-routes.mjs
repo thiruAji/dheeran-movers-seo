@@ -5,7 +5,7 @@ import { articles, blogIndex } from '../src/blog.js';
 const root=process.cwd(), dist=resolve(root,'dist');
 const base=(process.env.VITE_SITE_URL||'https://www.your-domain.sg').replace(/\/$/,'');
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#x27;');
-if(pages.length!==30)throw new Error(`Expected 30 pages, found ${pages.length}`);
+if(pages.length!==31)throw new Error(`Expected 31 pages, found ${pages.length}`);
 const slugs=new Set(),titles=new Set(),descriptions=new Set();
 for(const p of pages){
   if(slugs.has(p.slug))throw new Error(`Duplicate slug: ${p.slug}`);slugs.add(p.slug);
