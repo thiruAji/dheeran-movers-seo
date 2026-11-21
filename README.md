@@ -1,13 +1,13 @@
 # Dheeran Movers Singapore website
 
-React + Vite + Tailwind CSS landing site for the 30 requested moving-service and area routes. The workspace had no pre-existing website source, so this is a fresh, deployable implementation. The editorial content, illustrations and navigation are original. The page structure takes general customer-journey inspiration from the publicly visible [Move Move Movers website](https://movemove.biz/): service discovery, planning information, FAQs and direct enquiry paths.
+React + Vite + Tailwind CSS site for 31 moving-service and area routes, a separate `/prices` page, and moving guides. The workspace had no pre-existing website source, so this is a fresh, deployable implementation. The editorial content, illustrations and navigation are original. The page structure takes general customer-journey inspiration from the publicly visible [Move Move Movers website](https://movemove.biz/): service discovery, planning information, FAQs and direct enquiry paths.
 
 ## Local development
 
 1. Install Node.js 20 or newer.
 2. Copy `.env.example` to `.env` and set the production/site details below.
 3. Run `npm install`, then `npm run dev`.
-4. Visit the local URL printed by Vite. The root page links to all 30 landing pages.
+4. Visit the local URL printed by Vite. The Prices button opens the separate price guide; the root page links to the service landing pages.
 
 ## Configure before launch
 
@@ -34,7 +34,7 @@ The site deliberately contains no invented street address, hours, reviews, crede
 
 Each route is pre-rendered into its own HTML document with its page content, title, description, canonical, Open Graph title/description/type/url and JSON-LD for the moving company, service and breadcrumb in the initial response. FAQs are visible on the pages; FAQPage rich-result markup is omitted because Google currently limits those search treatments to well-known authoritative government and health sites. Verify the deployed pages in Search Console URL Inspection and a structured data validator.
 
-`npm run build` writes `public/sitemap.xml` and `public/robots.txt` for the configured origin, builds the assets, and pre-renders the home page plus all 30 routes. The site includes an optional GA4 loader, responsive navigation, downloadable moving checklist, internal service/area links, and a quote form with WhatsApp fallback.
+`npm run build` writes `public/sitemap.xml` and `public/robots.txt` for the configured origin, builds the assets, and pre-renders the home page, the separate Prices page, all 31 service routes and the moving guides. The site includes an optional GA4 loader, responsive navigation, downloadable moving checklist, internal service/area links, and a quote form with WhatsApp fallback.
 
 ## Routes
 
