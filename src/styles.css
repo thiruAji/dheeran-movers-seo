@@ -71,3 +71,5 @@ footer{background:var(--navy);color:#fff}
 
 /* Home hero uses the full content width after removing its illustration. */
 .home-hero{grid-template-columns:1fr}.home-hero .hero-copy{max-width:780px}
+
+@media(max-width:640px){.mobile-actions{grid-template-columns:.9fr 1.1fr 1.4fr}.mobile-actions .mobile-whatsapp{background:#fff;color:var(--navy);border:1px solid var(--line)}}
